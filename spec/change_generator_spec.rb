@@ -6,4 +6,8 @@ describe ChangeGenerator do
   it "takes '1' and returns ['£1']" do
     expect(change_generator.convert(1)).to eq (["£1"])
   end
+
+  it "takes '2' and returns ['£2']" do
+    expect(change_generator.convert(2)).to eq (["£2"])
+  end
 end

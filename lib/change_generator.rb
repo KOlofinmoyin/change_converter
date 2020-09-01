@@ -1,6 +1,6 @@
 
 class ChangeGenerator
   def convert(number)
-    ["£1"]
+    number == 1 ? ["£1"] : ["£2"]
   end
 end
