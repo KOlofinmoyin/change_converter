@@ -3,8 +3,9 @@ class ChangeGenerator
     money = []
 
     if number.is_a? Float
-      decimal = ((number - number.to_i) + number.to_i)
-      decimal < 1 ? money << "#{(decimal * 100).to_i}p" : money << "£#{number}"
+      pounds = number.to_i
+      pence = ((number - number.to_i) * 100).to_i
+      number < 1 ? money << "#{pence}p" : money << "£#{pounds}" && money << "#{pence}p"
     else
       number == 1 ? money << "£#{number}" : number == 2 ? money << "£#{number}" : money << "50p"
     end
