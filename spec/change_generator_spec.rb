@@ -14,4 +14,8 @@ describe ChangeGenerator do
   it "takes '0.50' and returns ['50p']" do
     expect(change_generator.convert(0.50)).to eq (["50p"])
   end
+
+  it "takes '1.50' and returns ['£1.55']" do
+    expect(change_generator.convert(1.55)).to eq (["£1.55"])
+  end
 end
