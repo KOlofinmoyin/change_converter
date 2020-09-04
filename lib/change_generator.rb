@@ -2,6 +2,9 @@ class ChangeGenerator
   def convert(number)
     money = []
     pence = (number * 100);
+    calculate_fifty_pounds = pence.round / 5000;
+    calculate_fifty_pounds.times { money << "£50" }
+    calculate_fifty_pounds.times { pence -= 5000 }
     calculate_twenty_pounds = pence.round / 2000;
     calculate_twenty_pounds.times { money << "£20" }
     calculate_twenty_pounds.times { pence -= 2000 }
@@ -29,6 +32,9 @@ class ChangeGenerator
     calculate_two_pence = pence.round / 2;
     calculate_two_pence.times { money << "2p" }
     calculate_two_pence.times { pence -= 2 }
+    calculate_one_pence = pence.round / 1;
+    calculate_one_pence.times { money << "1p" }
+    calculate_one_pence.times { pence -= 1 }
 
     p money
 
