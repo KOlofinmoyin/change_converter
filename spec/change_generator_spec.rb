@@ -27,4 +27,8 @@ describe ChangeGenerator do
     expect(change_generator.convert(40)).to eq (["£20", "£20"])
   end
 
+  it "takes '16.30' and returns ['£10', '£5', '£1', '20p', '10p']" do
+    expect(change_generator.convert(16.30)).to eq (["£10", "£5", "£1", "20p", "10p"])
+  end
+
 end

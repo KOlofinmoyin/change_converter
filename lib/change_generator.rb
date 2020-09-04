@@ -5,6 +5,9 @@ class ChangeGenerator
     calculate_twenty_pounds = pence.to_i / 2000;
     calculate_twenty_pounds.times { money << "£20" }
     calculate_twenty_pounds.times { pence -= 2000 }
+    calculate_ten_pounds = pence.to_i / 1000;
+    calculate_ten_pounds.times { money << "£10" }
+    calculate_ten_pounds.times { pence -= 1000 }
     calculate_five_pounds = pence.to_i / 500;
     calculate_five_pounds.times { money << "£5" }
     calculate_five_pounds.times { pence -= 500 }
